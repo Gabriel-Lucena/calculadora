@@ -8,7 +8,38 @@ const resultado = document.getElementById("resultado")
 
 function calculadorDeImc (massa, altura) {
 
-    return parseFloat((massa * altura ** -2))
+    return parseFloat((massa * altura ** -2)).toFixed(2)
+
+}
+
+function testador (number, name) {
+    
+        if (number > 40) {
+
+            return name + ", seu IMC é " + number + " e você está com obesidade grau III."
+
+        } else if (number >= 35 ) {
+
+            return name + ", seu IMC é " + number + " e você está com obesidade grau II."
+
+        } else if (number >= 30) {
+
+            return name + ", seu IMC é " + number + " e você está com obesidade grau I."
+
+        } else if (number >= 25) {
+
+            return name + ", seu IMC é " + number + " e você está acima do peso."
+
+        } else if (number >= 18.5) {
+
+            return name + ", seu IMC é " + number + " e você está com o peso ideal."
+ 
+
+        } else {
+
+            return nome.value + ", seu IMC é " + number + " e você está abaixo do peso."
+
+        }
 
 }
 
@@ -19,34 +50,36 @@ function calculadoraDeImc() {
         // const imc = parseFloat(massa.value) * (parseFloat(altura.value) ** -2 ).toFixed(2)
 
         const imcReal = calculadorDeImc(massa.value, altura.value)
+        resultado.textContent = testador(imcReal, nome.value)
 
+        return resultado
 
-        if (imcReal > 40) {
+        // if (imcReal > 40) {
 
-            resultado.textContent = nome.value + ", seu IMC é " + imcReal + " e você está com obesidade grau III."
+        //     resultado.textContent = nome.value + ", seu IMC é " + imcReal + " e você está com obesidade grau III."
 
-        } else if (imcReal >= 35 ) {
+        // } else if (imcReal >= 35 ) {
 
-            resultado.textContent = nome.value + ", seu IMC é " + imcReal + " e você está com obesidade grau II."
+        //     resultado.textContent = nome.value + ", seu IMC é " + imcReal + " e você está com obesidade grau II."
 
-        } else if (imcReal >= 30) {
+        // } else if (imcReal >= 30) {
 
-            resultado.textContent = nome.value + ", seu IMC é " + imcReal + " e você está com obesidade grau I."
+        //     resultado.textContent = nome.value + ", seu IMC é " + imcReal + " e você está com obesidade grau I."
 
-        } else if (imcReal >= 25) {
+        // } else if (imcReal >= 25) {
 
-            resultado.textContent = nome.value + ", seu IMC é " + imcReal + " e você está acima do peso."
+        //     resultado.textContent = nome.value + ", seu IMC é " + imcReal + " e você está acima do peso."
 
-        } else if (imcReal >= 18.5) {
+        // } else if (imcReal >= 18.5) {
 
-            resultado.textContent = nome.value + ", seu IMC é " + imcReal + " e você está com o peso ideal."
+        //     resultado.textContent = nome.value + ", seu IMC é " + imcReal + " e você está com o peso ideal."
  
 
-        } else {
+        // } else {
 
-            resultado.textContent = nome.value + ", seu IMC é " + imcReal + " e você está abaixo do peso."
+        //     resultado.textContent = nome.value + ", seu IMC é " + imcReal + " e você está abaixo do peso."
 
-        }
+        // }
 
     } else {
 
