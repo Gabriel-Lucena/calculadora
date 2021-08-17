@@ -6,36 +6,45 @@ const massa = document.getElementById("massa")
 const imc = document.getElementById("botao")
 const resultado = document.getElementById("resultado")
 
+function calculadorDeImc (massa, altura) {
+
+    return parseFloat((massa * altura ** -2))
+
+}
+
 function calculadoraDeImc() {
     
-    if ( altura.value !== '' && massa.value !== '') {
+    if ( altura.value !== '' && massa.value !== '' && nome !== "") {
 
-        const imc = parseFloat(massa.value) / (parseFloat(altura.value) * parseFloat(altura.value) )
+        // const imc = parseFloat(massa.value) * (parseFloat(altura.value) ** -2 ).toFixed(2)
 
-        if (imc > 40) {
+        const imcReal = calculadorDeImc(massa.value, altura.value)
 
-            resultado.textContent = nome.value + ", seu IMC é " + imc + " e você está com obesidade grau III."
 
-        } else if (imc >= 35 ) {
+        if (imcReal > 40) {
 
-            resultado.textContent = nome.value + ", seu IMC é " + imc + " e você está com obesidade grau II."
+            resultado.textContent = nome.value + ", seu IMC é " + imcReal + " e você está com obesidade grau III."
 
-        } else if (imc >= 30) {
+        } else if (imcReal >= 35 ) {
 
-            resultado.textContent = nome.value + ", seu IMC é " + imc + " e você está com obesidade grau I."
+            resultado.textContent = nome.value + ", seu IMC é " + imcReal + " e você está com obesidade grau II."
 
-        } else if (imc >= 25) {
+        } else if (imcReal >= 30) {
 
-            resultado.textContent = nome.value + ", seu IMC é " + imc + " e você está acima do peso."
+            resultado.textContent = nome.value + ", seu IMC é " + imcReal + " e você está com obesidade grau I."
 
-        } else if (imc >= 18.5) {
+        } else if (imcReal >= 25) {
 
-            resultado.textContent = nome.value + ", seu IMC é " + imc + " e você está com o peso ideal."
+            resultado.textContent = nome.value + ", seu IMC é " + imcReal + " e você está acima do peso."
 
+        } else if (imcReal >= 18.5) {
+
+            resultado.textContent = nome.value + ", seu IMC é " + imcReal + " e você está com o peso ideal."
+ 
 
         } else {
 
-            resultado.textContent = nome.value + ", seu IMC é " + imc + " e você está abaixo do peso."
+            resultado.textContent = nome.value + ", seu IMC é " + imcReal + " e você está abaixo do peso."
 
         }
 
