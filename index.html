@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
     <title>IMC</title>
 </head>
 
@@ -40,7 +41,7 @@
                         <td>Obesidade grau I</td>
                     </tr>
                     <tr>
-                        <td>IMC 35.0 - 39.9</td>
+                        <td>IMC 35.0 - 40</td>
                         <td>Obesidade grau II</td>
                     </tr>
                     <tr>
@@ -56,29 +57,29 @@
                 
                 <div class="campo">
                     <label for="">Nome:</label>
-                    <input type="text">
+                    <input type="text" id="nome">
                 </div>
 
                 <div class="campo unidade" data-unidade = "metros">
                     <label for="">Altura:</label>
-                    <input type="text">
+                    <input id = "altura" type="text">
                 </div>
 
                 <div class="campo unidade" data-unidade = "quilos">
                     <label for="">Peso:</label>
-                    <input type="text">
+                    <input id = "massa" type="text">
                 </div>
 
-                <button type="button">CALCULAR</button>
+                <button id = "botao" type="button">CALCULAR</button>
 
-                <div id="resultado">texto para teste</div>
+                <div id="resultado"></div>
 
             </form>
         </section>
     </main>
 
     <footer>
-        <span>Copyright &copy; 2021 | Felipe de Melo Fernandes</span>
+        <span>Copyright &copy; 2021 | Gabriel Lucena da Cunha</span>
     </footer>
 
 </body>
