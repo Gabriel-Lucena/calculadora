@@ -1,6 +1,5 @@
 const calcular = document.getElementById("calcular")
 
-
 // Procura todo tipo de informação
 
 const calcular = document.querySelector(".calcular>div")
@@ -10,7 +9,6 @@ const calcular = document.querySelector("calcular")
 // Procura todo tipo de informação
 
 // Capturar o click
-
 
 // Função
 
@@ -70,7 +68,7 @@ function exibirIMC() {
 
 calcular.addEventListener('click', calcularIMC)
 
-//                               Função
+//                                 Função
 
 // Ou
 
