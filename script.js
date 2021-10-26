@@ -26,38 +26,11 @@ function testador(number, name) {
 
 function calculadoraDeImc() {
 	if (altura.value !== "" && massa.value !== "" && nome !== "") {
-		// const imc = parseFloat(massa.value) * (parseFloat(altura.value) ** -2 ).toFixed(2)
 
 		const imcReal = calculadorDeImc(massa.value, altura.value);
 		resultado.textContent = testador(imcReal, nome.value);
 
 		return resultado;
-
-		// if (imcReal > 40) {
-
-		//     resultado.textContent = nome.value + ", seu IMC é " + imcReal + " e você está com obesidade grau III."
-
-		// } else if (imcReal >= 35 ) {
-
-		//     resultado.textContent = nome.value + ", seu IMC é " + imcReal + " e você está com obesidade grau II."
-
-		// } else if (imcReal >= 30) {
-
-		//     resultado.textContent = nome.value + ", seu IMC é " + imcReal + " e você está com obesidade grau I."
-
-		// } else if (imcReal >= 25) {
-
-		//     resultado.textContent = nome.value + ", seu IMC é " + imcReal + " e você está acima do peso."
-
-		// } else if (imcReal >= 18.5) {
-
-		//     resultado.textContent = nome.value + ", seu IMC é " + imcReal + " e você está com o peso ideal."
-
-		// } else {
-
-		//     resultado.textContent = nome.value + ", seu IMC é " + imcReal + " e você está abaixo do peso."
-
-		// }
 	} else {
 		alert("Preencha os campos corretamente!");
 	}
